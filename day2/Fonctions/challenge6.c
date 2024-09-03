@@ -11,11 +11,11 @@ int fibonacci(int n) {
 int main() {
     int n;
 
-    printf("Entrez un numéro pour trouver le n-ième terme de la suite de Fibonacci: ");
+    printf("Entrez un numero pour trouver le Fibonacci: ");
     scanf("%d", &n);
 
     int result = fibonacci(n);
-    printf("Le %d-ième terme de la suite de Fibonacci est: %d\n", n, result);
+    printf("Le %d-ieme terme de la suite de Fibonacci est: %d\n", n, result);
 
     return 0;
 }

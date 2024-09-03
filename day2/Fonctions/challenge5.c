@@ -1,11 +1,11 @@
 #include<stdio.h>
 
 int fact(int N1 ){
-    int f = 1 , s ;
+    int s = 1 ;
     for (int i = 2 ; i <= N1 ; i++){
-        s = f * i ;
+        s = s * i ;
     }
-    
+    return s ;
 }
 
 
