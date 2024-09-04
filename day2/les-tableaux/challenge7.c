@@ -15,7 +15,7 @@ int main(){
     for(int i = 0 ; i < N ; i++){
         for(int y = i+1 ; y < N ; y++){
             if (t[i] > t[y] ){
-                tmp = t[i];
+                tmp = t[i]; 
                 t[i] = t[y] ;
                 t[y] = tmp ;
             }
