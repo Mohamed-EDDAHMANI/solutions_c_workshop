@@ -3,12 +3,6 @@
 
 #define MAX_BOOKS 100
 
-struct livre{
-    char titre[50];
-    char auteur[50];
-    float prix ;
-    int Quantite ;
-};
 
 void creerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], float prix[MAX_BOOKS], int quantite[MAX_BOOKS], int livreCount){
 
