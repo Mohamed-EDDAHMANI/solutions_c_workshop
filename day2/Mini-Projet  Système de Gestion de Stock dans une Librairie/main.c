@@ -80,7 +80,6 @@ void SupprimerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], flo
     for(int i = indexOfLivre ; i < *livreCount - 1 ; i++){
         if(titres[i] != '\0'){
             strcpy(titres[i] , titres[i + 1]);
-            printf("%s : " ,titres[i + 1]);
             strcpy(auteurs[i] , auteurs[i + 1]);
             prix[i] = prix[i + 1];
             quantite[i] = quantite[i + 1];
@@ -110,7 +109,6 @@ int main(){
 
         printf("--- Entrer le nombre de command : ");
         scanf("%d" , &option);
-
 
         switch (option){
         case 0:
