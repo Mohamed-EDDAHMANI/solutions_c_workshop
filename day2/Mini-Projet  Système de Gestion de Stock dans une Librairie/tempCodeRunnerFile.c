@@ -1,1 +1,0 @@
-continuer la gestion par les Nombres command suivent

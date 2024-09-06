@@ -67,6 +67,9 @@ void SupprimerContact(char nom[200][50], char Numero[200][50], char email[200][5
 }
 
 void afficherContact(char nom[200][50], char Numero[200][50], char email[200][50] , int CC){
+    if (CC == 0){
+        printf("-----------|| les contact est vide ||-----------\n");
+    }
     
     for(int i = 0 ; i < CC ; i++){
         printf("-----------|| le contact %d ||-----------\n", i + 1);
@@ -104,7 +107,7 @@ int main(){
     char Numero[200][50] ;
     char email[200][50] ;
     int CC = 0 , option ;
-
+    
     while (1)
     {
         printf("\n");
