@@ -42,7 +42,6 @@ int main(){
             }else if (option == 1){
                break;
             }
-            break;
         case 2:
             AfficherLivresDisponibles(titres, auteurs, prix, quantite, livreCount);
             printf("0 - Pour arreter le programme\n");
@@ -67,7 +66,7 @@ int main(){
             }
             break;
         case 4:
-                SupprimerLivre(titres, auteurs, prix, quantite, &livreCount);
+            SupprimerLivre(titres, auteurs, prix, quantite, &livreCount);
             printf("0 - Pour arreter le programme\n");
             printf("1 - Pour contuner\n");
             scanf("%d" , &option);
@@ -78,7 +77,8 @@ int main(){
             }
             break;
         case 5:
-            printf("Nombre total de livres en stock : %d\n", livreCount);
+            option = NombreStock(quantite,livreCount) ;
+            printf("Nombre total de livres en stock : %d\n", option);
             printf("0 - Pour arreter le programme\n");
             printf("1 - Pour contuner\n");
             scanf("%d" , &option);

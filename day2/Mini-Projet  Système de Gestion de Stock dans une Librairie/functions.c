@@ -88,3 +88,13 @@ void SupprimerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], flo
     (*livreCount)-- ;
     printf("Le livre a été supprimé avec succès.\n");
 }
+
+int NombreStock(int quantite[MAX_BOOKS], int livreCount){
+    int somme = 0;
+
+    for(int i = 0 ; i < livreCount ; i++){
+        somme += quantite[i] ;
+    }
+    return somme ;
+
+}

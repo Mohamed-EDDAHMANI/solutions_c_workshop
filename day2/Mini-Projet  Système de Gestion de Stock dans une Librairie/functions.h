@@ -10,3 +10,5 @@ void modifierQuantite(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], f
 
 
 void SupprimerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], float prix[MAX_BOOKS], int quantite[MAX_BOOKS], int *livreCount);
+
+int NombreStock(int quantite[MAX_BOOKS], int livreCount);
