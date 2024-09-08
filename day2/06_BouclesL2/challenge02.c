@@ -1,18 +1,27 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main(){
-    int N ;
+int main() {
+    int N;
 
-    printf("Entrer un nombre : ");
+    printf("Entrer un nombre pair : ");
     scanf("%d", &N);
 
-    for (int i = 1; i <= N ; i++){
-        if(i % 2 != 0){
-            for (int y = 1; y <= i; y++){
-                printf("*");
-            }
-        printf("\n" );
-        }
+    if (N % 2 != 0) {
+        printf("Veuillez entrer un nombre pair.\n");
+        return 1;
     }
-   return 0;  
+
+    for (int l = 1; l <= N / 2; l++) {
+        for (int h = 0; h < (N / 2) - l; h++) {
+            printf(" ");
+        }
+
+        for (int s = 0; s < (2 * l) - 1; s++) {
+            printf("*");
+        }
+
+        printf("\n");
+    }
+
+    return 0;
 }

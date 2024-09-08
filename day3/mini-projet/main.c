@@ -70,6 +70,8 @@ void afficherContact(char nom[200][50], char Numero[200][50], char email[200][50
     if (CC == 0){
         printf("-----------|| les contact est vide ||-----------\n");
     }
+
+    
     
     for(int i = 0 ; i < CC ; i++){
         printf("-----------|| le contact %d ||-----------\n", i + 1);
