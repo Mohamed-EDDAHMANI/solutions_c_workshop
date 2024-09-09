@@ -1,4 +1,3 @@
-//#ifndef functions_h
 #define MAX_BOOKS 100
 
 
