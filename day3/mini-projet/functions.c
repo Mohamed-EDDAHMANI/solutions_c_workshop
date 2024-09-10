@@ -6,7 +6,6 @@
 
 void AjouterContact(char nom[200][50], char Numero[200][50], char email[200][50] , int CC){
 
-
     printf("----------- || Veuillez Entrez les donne de contact %d || ------------- ", CC + 1 );
     printf("              Entrer le nom de contact : " );
     scanf(" %[^\n]",nom[CC]);

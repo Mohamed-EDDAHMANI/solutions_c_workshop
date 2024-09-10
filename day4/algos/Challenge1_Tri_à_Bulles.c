@@ -14,7 +14,7 @@ int main()
     printf("}\n");
 
     printf("Le tableau  apres le tri \n");
-    for (int i = 0; i < taille - 1; i++)
+    for (int i = 0; i < taille - 1 ; i++)
     {
         for (int j = 0; j < taille - i - 1; j++)
         {
