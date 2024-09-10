@@ -19,7 +19,7 @@ int main() {
     }
     printf("\n");
 
-    int low = 0, high = n - 1, pivot, i, j, temp;
+    int low = 0, high = n - 1, i, j, pivot, temp;
     int stack[high - low + 1];
     int top = -1;
 
@@ -58,7 +58,7 @@ int main() {
         }
     }
 
-    printf("Tableau apres le tri:\n");
+    printf("Tableau après le tri:\n");
     for (int i = 0; i < n; i++) {
         printf("%d ", arr[i]);
     }
