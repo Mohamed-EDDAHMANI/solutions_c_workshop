@@ -44,61 +44,29 @@ int main(){
             break;
         case 2:
             ModifierContact(nom ,Numero, email, CC);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
-            return 0;
             break;
         case 3:
             SupprimerContact(nom ,Numero, email, &CC);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
-            return 0;
             break;
         case 4:
             afficherContact(nom ,Numero, email, CC);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
-            return 0;
             break;
         case 5:
             RechercherContact(nom ,Numero, email, CC);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
-            return 0;
             break;
         
         default:
             break;
         }
+         printf("( 0 ) - Pour arreter le programme\n");
+         printf("( 1 ) - Pour contuner\n");
+         scanf("%d" , &option);
+         if (option == 0){
+            return 0;
+         }else if (option == 1){
+            break;
+         }
     }
     
-
-
-
-
     return 0;
 }

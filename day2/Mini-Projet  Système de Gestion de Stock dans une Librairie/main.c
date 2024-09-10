@@ -34,63 +34,24 @@ int main(){
         case 1:
             creerLivre(titres, auteurs, prix, quantite, livreCount);
             livreCount++;
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
+            break;
         case 2:
             AfficherLivresDisponibles(titres, auteurs, prix, quantite, livreCount);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
             break;
         case 3:
             modifierQuantite(titres, auteurs, prix, quantite, livreCount);
             AfficherLivresDisponibles(titres, auteurs, prix, quantite, livreCount);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
             break;
         case 4:
             SupprimerLivre(titres, auteurs, prix, quantite, &livreCount);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
             break;
         case 5:
             option = NombreStock(quantite,livreCount) ;
-            printf("Nombre total de livres en stock : %d\n", option);
-            printf("0 - Pour arreter le programme\n");
-            printf("1 - Pour contuner\n");
-            scanf("%d" , &option);
-            if (option == 0){
-               return 0;
-            }else if (option == 1){
-               break;
-            }
             break;
         default:
-            printf("Choix invalide, veuillez réessayer.\n");
-            printf("0 - Pour arreter le programme\n");
+            break;
+        }
+        printf("0 - Pour arreter le programme\n");
             printf("1 - Pour contuner\n");
             scanf("%d" , &option);
             if (option == 0){
@@ -98,8 +59,6 @@ int main(){
             }else if (option == 1){
                break;
             }
-            break;
-        }
 
     }
 

@@ -6,13 +6,14 @@
 
 void creerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], float prix[MAX_BOOKS], int quantite[MAX_BOOKS], int livreCount){
 
-    printf("Entre le titre :");
+    printf("---------|| les donne du livre %d || ----------", livreCount + 1);
+    printf("------ Entre le titre :");
     scanf(" %[^\n]", titres[livreCount]);
-    printf("Entre le auteur :");
+    printf("------ Entre le auteur :");
     scanf(" %[^\n]", auteurs[livreCount]);
-    printf("Entre le prix :");
+    printf("------ Entre le prix :");
     scanf("%f", &prix[livreCount]);
-    printf("Entre le Quantite :");
+    printf("------ Entre le Quantite :");
     scanf("%d", &quantite[livreCount]);
 
 }
@@ -28,7 +29,6 @@ void AfficherLivresDisponibles(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOK
         printf("------------------ || Aucun livre disponible. || ------------------\n");
         return;
     }
-        printf("------------------ || work. || ------------------\n");
     //tri a bulle
     for(int i = 0 ; i < livreCount - 1 ; i++){
         for (int j = 0 ; j < livreCount - i - 1 ; j++)
@@ -40,17 +40,17 @@ void AfficherLivresDisponibles(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOK
                 prix[i] = prix[i + 1];
                 prix[i + 1] = prixTMP ;
     
-                //titre change
+                //quantite change
                 quantiteTMP = quantite[i] ;
                 quantite[i] = quantite[i + 1];
                 quantite[i + 1] = quantiteTMP ;
     
-                //prix change
+                //titres change
                 strcpy( titresTMP , titres[i] ) ;
                 strcpy( titres[i] , titres[i + 1] ) ;
                 strcpy( titres[i + 1] , titresTMP ) ;
                 
-                //prix change
+                //auteurs change
                 strcpy( auteursTMP , auteurs[i] ) ;
                 strcpy( auteurs[i] , auteurs[i + 1] ) ;
                 strcpy( auteurs[i + 1] , auteursTMP ) ;
@@ -61,11 +61,11 @@ void AfficherLivresDisponibles(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOK
 
 
     for(int i = 0 ; i < livreCount ; i++){
-        printf("-------------- || Livre %d || -------------- \n", i + 1);
-        printf("--------------Titre: %s\n", titres[i]);
-        printf("--------------Auteur: %s\n", auteurs[i]);
-        printf("--------------Prix: %.2f\n", prix[i]);
-        printf("--------------Quantite: %d\n", quantite[i]);
+        printf("--------------- || Livre %d || -------------- \n", i + 1);
+        printf("----------- Titre: %s\n", titres[i]);
+        printf("----------- Auteur: %s\n", auteurs[i]);
+        printf("----------- Prix: %.2f\n", prix[i]);
+        printf("----------- Quantite: %d\n", quantite[i]);
         printf("--------------------------------------------\n");
     }
 }
@@ -78,7 +78,7 @@ void modifierQuantite(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], f
         return;
     }
 
-    printf("le titre du livre rechercher : ");
+    printf("Veuillez Entrez le titre du livre rechercher : ");
     scanf(" %[^\n]", titreRecherche);
     printf("Veuillez Entrez la nouvelle quantite : ");
     scanf("%d", &nouvelleQuantite);
@@ -105,7 +105,7 @@ void SupprimerLivre(char titres[MAX_BOOKS][50], char auteurs[MAX_BOOKS][50], flo
         return;
     }
 
-    printf("le titre du livre rechercher : ");
+    printf("Veuillez Entrez le titre du livre rechercher pour suppremer : ");
     scanf(" %[^\n]", titreRecherche);
 
     for(int i = 0 ; i < *livreCount ; i++){

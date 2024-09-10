@@ -7,13 +7,15 @@
 void AjouterContact(char nom[200][50], char Numero[200][50], char email[200][50] , int CC){
 
 
-    printf("Entrer le nom de contact : " );
+    printf("----------- || Veuillez Entrez les donne de contact %d || ------------- ", CC + 1 );
+    printf("              Entrer le nom de contact : " );
     scanf(" %[^\n]",nom[CC]);
-    printf("Entrer le Numero de contact : ");
+    printf("              Entrer le Numero de contact : ");
     scanf(" %[^\n]",Numero[CC]);
-    printf("Entrer le email de contact : ");
+    printf("              Entrer le email de contact : ");
     scanf(" %[^\n]",email[CC]);
 
+    printf("Le contact a été enregistrer avec succès.\n");
 }
 
 void ModifierContact(char nom[200][50], char Numero[200][50], char email[200][50] , int CC){
@@ -21,7 +23,8 @@ void ModifierContact(char nom[200][50], char Numero[200][50], char email[200][50
     char nouvelleNom[50];
     char nouvelleNumero[50];
     char nouvelleemail[50];
-    printf("Entrer le nom de contact pour modifier :");
+
+    printf("Veuillez Entrez le nom de contact pour modifier :");
     scanf(" %[^\n]", nomRechercher);
     printf("Entrer le nouveau nom :");
     scanf(" %[^\n]", nouvelleNom);
@@ -46,7 +49,7 @@ void SupprimerContact(char nom[200][50], char Numero[200][50], char email[200][5
     char nomRechercher[50] ;
     int indexOfContact ;
 
-    printf("entrer le nom de contact :");
+    printf("Veuillez Entrez le nom de contact :");
     scanf(" %[^\n]", nomRechercher);
 
     for(int i = 0 ; i <= *CC ; i++){
@@ -57,7 +60,7 @@ void SupprimerContact(char nom[200][50], char Numero[200][50], char email[200][5
     int taille = *CC -(indexOfContact - 1);
 
     for(int i = indexOfContact ; i < taille ; i++){
-        if (nom[i] != '\0'){
+        if (nom[i + 1] != '\0'){
             strcpy(nom[i] , nom[i + 1]);
             strcpy(Numero[i] , Numero[i + 1]);
             strcpy(email[i] , email[i + 1]);
@@ -76,11 +79,11 @@ void afficherContact(char nom[200][50], char Numero[200][50], char email[200][50
     
     
     for(int i = 0 ; i < CC ; i++){
-        printf("-----------|| le contact %d ||-----------\n", i + 1);
-        printf("------ le nom : %s \n", nom[i]);
-        printf("------ le Numero : %s \n", Numero[i]);
-        printf("------ l'email : %s \n", email[i]);
-        printf("------------------------------------------\n");
+        printf("-----------------|| le contact %d ||--------------\n", i + 1);
+        printf("------------ le nom : %s \n", nom[i]);
+        printf("------------ le Numero : %s \n", Numero[i]);
+        printf("------------ l'email : %s \n", email[i]);
+        printf("---------------------------------------------------\n");
         printf("\n");
     }
 }
@@ -89,7 +92,7 @@ void RechercherContact(char nom[200][50], char Numero[200][50], char email[200][
     char nomRechercher[50];
     int index ;
 
-    printf("Entrer le nom de contact pour modifier :");
+    printf("Veuillez Entrez le nom de contact pour modifier :");
     scanf(" %[^\n]", nomRechercher);
 
     for(int i = 0 ; i < CC ; i++){
